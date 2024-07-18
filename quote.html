@@ -7,7 +7,7 @@
   <meta name="description" content="" />
   <meta name="Author" content="Codeboxx Wizardz" />
 
-  <title>Smarty Template</title>
+  <title>Rocket Elevators</title>
   <link rel="icon" href="./images/logo.png" />
 
   <!-- MOBILE SETTINGS -->
@@ -40,10 +40,10 @@
 
 <body class="smoothscroll enable-animation">
   <!-- WEBSITE WRAPPER -->
-  <div id="">
+  <div id="wrapper">
 
     <!-- HEADER -->
-    <section id="" class="navbar-toggleable-md sticky header-md clearfix">
+    <section id="header" class="navbar-toggleable-md sticky header-md clearfix">
       <div id="topNav">
         <div class="container">
           <!-- Mobile Menu Button -->
@@ -52,29 +52,29 @@
           </button>
           <!-- Logo -->
           <a class="logo float-left scrollTo" href="#wrapper">
-            <img src="./images/rocketLogo.png" alt="" />
+            <img src="./assets/images/rocketLogo.png" alt="" />
           </a>
           <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
             <nav class="nav-main">
               <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
                 <li class="active">
                   <!-- HOME -->
-                  <a href="index.html#services"> HOME </a>
+                  <a href="index.html"> HOME </a>
                 </li>
                 <li class="dropdown">
                   <!-- SERVICES -->
-                  <a class="dropdown-toggle" href="index.html">
+                  <a class="dropdown-toggle" href="#services">
                     SERVICES
                   </a>
                   <ul class="dropdown-menu">
                     <li class="dropdown">
-                      <a class="dropdown-toggle" href="commercial.html">
+                      <a class="dropdown-toggle" href="residential.html">
                         RESIDENTIAL SERVICES
                       </a>
-                      <a class="dropdown-toggle" href="residential.html">
+                      <a class="dropdown-toggle" href="commercial.html">
                         COMMERCIAL SERVICES
                       </a>
-                      <a class="dropdown-toggle" href="quotes.html">
+                      <a class="dropdown-toggle" href="quote.html">
                         REQUEST A QUOTE
                       </a>
                     </li>
@@ -82,19 +82,19 @@
                 </li>
                 <li>
                   <!-- PORTFOLIO -->
-                  <a href="index#portfolio"> PORTFOLIO </a>
+                  <a href="#portfolio"> PORTFOLIO </a>
                 </li>
                 <li>
                   <!-- NEWS -->
-                  <a href="index.html/news"> NEWS </a>
+                  <a href="#news"> NEWS </a>
                 </li>
                 <li>
                   <!-- CLIENTS -->
-                  <a href="index.html/clients"> CLIENTS </a>
+                  <a href="#clients"> CLIENTS </a>
                 </li>
                 <li>
                   <!-- CONTACT -->
-                  <a href="commercial.html/contact"> CONTACT </a>
+                  <a href="#contact"> CONTACT </a>
                 </li>
               </ul>
             </nav>
@@ -104,12 +104,29 @@
     </section>
     <!-- /HEADER -->
 
+    <!-- HEADER BREADCRUMBS SECTION -->
+    <div class="page-header page-header-xs parallax parallax-3" style="
+          background-image: url('./images/imgpattern2.jpg');
+        ">
+      <div class="overlay dark-2"></div>
+      <div class="container">
+        <h1><strong>QUOTE SERVICES</strong></h1>
+        <!-- breadcrumbs -->
+				<ol class="breadcrumb">
+					<li><a href="residential.html">Residential</a></li>
+					<li><a href="commercial.html">Commercial</a></li>
+				</ol>
+				<!-- /breadcrumbs -->
+      </div>
+    </div>
+    <!-- /HEADER BREADCRUMBS SECTION -->
+
     <!-- PRICING SECTION -->
-    <div id="">
+    <div id="pricing">
       <div class="container">
         <header class="text-center mb-60 wow fadeInUp" data-wow-delay="0.5s">
           <div class="heading-title heading-dotted text-center">
-            <h2 style="margin-top: 30px;">Elevators Pricing</h2>
+            <h2 style="margin-top: 30px;">Rocket Elevators Pricing</h2>
             <p class="lead font-lato">Elevator options tailored to your needs.</p>
           </div>
         </header>
@@ -150,6 +167,420 @@
     </section>
     <!-- /PRICING SECTION -->
 
+    <!-- QUOTE FORM SECTION -->
+  </section id="quote">
+  <div class="container text-center mb-60">
+    <h3 class="m-0 fs-50 fw-300 wow fadeInUp" data-wow-delay="0.4s">
+      <div class="heading-title heading-dotted text-center">
+        <h2 style="margin-bottom: 20px;">Request a Quote</h2>
+      </div>
+    </h3>
+  </div>
+  <div class="container">
+    <form class="validate" id="quote-form">
+      <!-- STEP 1 -->
+      <div id="step-1" class="select-building-type card card-default">
+        <div class="card-heading card-heading-transparent">
+          <label class="card-title">
+            <h3>
+              <span style="color: rgb(10, 101, 160); font-weight: bolder">STEP 1 |</span>
+              Select Type of Building
+            </h3>
+          </label>
+        </div>
+        <div class="card-block" style="margin: 20px">
+          <!-- Building type selection -->
+          <select id="building-type" name="building-type" class="form-control pointer required">
+            <option>---Select---</option>
+            <option id="residential" value="residential">
+              Residential
+            </option>
+            <option id="commercial" value="commercial">Commercial</option>
+            <option id="industrial" value="industrial">Industrial</option>
+          </select>
+        </div>
+      </div>
+      <!-- /STEP 1 -->
+
+      <!-- STEP 2 -->
+      <div id="step-2" class="estimate-num-elv card card-default">
+        <div class="card-heading step-description">
+          <h3>
+            <span style="color: rgb(10, 101, 160); font-weight: bolder">STEP 2 |</span>
+            Provide Building Information
+          </h3>
+        </div>
+        <div class="card-block">
+          <div class="row" style="margin: 20px">
+            <!-- Division of the input fields for number of apartments -->
+            <div id="div-number-of-apartments" class="col-4">
+              <label>
+                <h4>Number of Apartments</h4>
+                <input type="number" min="1" max="1000" class="form-control" required />
+              </label>
+            </div>
+            <!-- Division of the input fields for number of floors -->
+            <div id="div-number-of-floors" class="col-4">
+              <label>
+                <h4>Number of Floors</h4>
+                <input type="number" min="1" max="1000" class="form-control" required />
+              </label>
+            </div>
+            <!-- Division of the input fields for number of elevators -->
+            <div id="div-number-of-elevators" class="col-4">
+              <label>
+                <h4>Number of Elevators</h4>
+                <input type="number" min="1" max="1000" class="form-control" required />
+              </label>
+            </div>
+            <!-- Division of the input fields for maximum occupancy -->
+            <div id="div-maximum-occupancy" class="col-4">
+              <label>
+                <h4>Maximum Occupancy</h4>
+                <input type="number" min="1" max="1000" class="form-control" required />
+              </label>
+            </div>
+          </div>
+          <div class="row" style="margin: 20px">
+            <!-- Division of the read-only input fields for amount of elevators needed -->
+            <div id="div-amount-elevators-needed" class="col-6">
+              <label>
+                <h4 style="margin-bottom: 0">
+                  Number of Elevators Required (Minimum of 1):
+                </h4>
+                <input type="number" class="form-control" readonly />
+              </label>
+              <p style="margin-bottom: 0">
+                * With exception for commercial buildings
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /STEP 2 -->
+
+      <!-- STEP 3 -->
+      <div id="step-3" class="product-line card card-default">
+        <div class="card-heading card-heading-transparent">
+          <h3>
+            <span style="color: rgb(10, 101, 160); font-weight: bolder">STEP 3 |</span>
+            Select Product Line
+          </h3>
+          <p style="margin-bottom: 0">
+            * Excluding tax and offers (if applicable)
+          </p>
+          <p style="
+                color: rgb(170, 69, 69);
+                display: none;
+                margin-bottom: 0;
+              " id="warning-step-2">
+            Complete Step 2 to Estimate Price
+          </p>
+        </div>
+        <div class="card-block">
+          <div id="radio-buttons-product-line" class="row">
+            <!-- Radio buttons for product line -->
+            <div class="col-4" style="display: flex; justify-content: center">
+              <label class="standard radio">
+                <!-- Radio button standard -->
+                <input type="radio" id="radio-button-standard" name="radio-product-line" />
+                <i></i> STANDARD ✭
+              </label>
+            </div>
+            <div class="col-4" style="display: flex; justify-content: center">
+              <label class="premium radio">
+                <!-- Radio button premium -->
+                <input type="radio" id="radio-button-premium" name="radio-product-line" />
+                <i></i> PREMIUM ✭✭
+              </label>
+            </div>
+            <div class="col-4" style="display: flex; justify-content: center">
+              <label class="excelium radio">
+                <!-- Radio button excelium -->
+                <input type="radio" id="radio-button-excelium" name="radio-product-line" />
+                <i></i> EXCELIUM ✭✭✭
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /STEP 3 -->
+
+      <!-- STEP 4 -->
+      <div id="step-4" class="final-pricing-display card card-default">
+        <div class="card-heading card-heading-transparent">
+          <h3>
+            <span style="color: rgb(10, 101, 160); font-weight: bolder">STEP 4 |</span>
+            Estimated Pricing
+          </h3>
+          <p style="margin-bottom: 0">
+            * Excluding tax and offers (if applicable)
+          </p>
+          <p style="color:rgb(170, 69, 69);display: none;margin-bottom: 0;" id="warning-step-4">
+            Complete Step 2 to Estimate Price
+          </p>
+        </div>
+        <div class="card-block">
+          <div class="pricing-display row mega-price-table" style="margin: 20px">
+            <div class="col-md-3 col-sm-6 block">
+              <div class="pricing">
+                <div class="pricing-head">
+                  <h3>Unit Price</h3>
+                  <small>for Product Line</small>
+                </div>
+                <h4>
+                  <label>
+                    <!-- Read-only input fields for elevator unit price -->
+                    <input id="elevator-unit-price" type="text" class="form-control" style="
+                          background: none;
+                          text-align: center;
+                          border: none;
+                          font-size: x-large;
+                        " readonly />
+                  </label>
+                </h4>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 block">
+              <div class="pricing">
+                <div class="pricing-head">
+                  <h3>Elevator Cost</h3>
+                  <small>Based on no. of Elevator Required</small>
+                </div>
+                <h4>
+                  <label>
+                    <!-- Read-only input fields for elevator cost -->
+                    <input id="elevator-total-price" type="text" class="form-control" style="
+                          background: none;
+                          text-align: center;
+                          border: none;
+                          font-size: x-large;
+                        " readonly />
+                  </label>
+                </h4>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 block">
+              <div class="pricing">
+                <div class="pricing-head">
+                  <h3>Installation Fee</h3>
+                  <small>Percent Elevator Cost</small>
+                </div>
+                <h4>
+                  <label>
+                    <!-- Read-only input fields for installation fees -->
+                    <input id="installation-fees" type="text" class="form-control" style="
+                          background: none;
+                          text-align: center;
+                          border: none;
+                          font-size: x-large;
+                        " readonly />
+                  </label>
+                </h4>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 block">
+              <div class="pricing">
+                <div class="pricing-head">
+                  <h3>Total Cost</h3>
+                  <small>Elevator plus Installation Fee</small>
+                </div>
+                <h4>
+                  <label>
+                    <!-- Read-only input fields for total cost -->
+                    <input id="total-cost" type="text" class="form-control" style="
+                          background: none;
+                          text-align: center;
+                          border: none;
+                          font-size: x-large;
+                        " readonly />
+                  </label>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /STEP 4 -->
+    </form>
+  </div>
+</section>
+<!-- /QUOTE FORM SECTION -->
+
+  <!-- TESTIMONIALS SECTION -->
+  <div id="testimonials" class="alternate">
+    <div class="container">
+      <header class="text-center mb-30">
+        <div class="heading-title heading-dotted text-center">
+          <h2 style="margin-top: 30px;">Testimonials</h2>
+          <p class="lead font-lato">
+            Satisfied Customers with our Elevators
+          </p>
+        </div>
+
+      </header>
+      <!-- Note: remove class="rounded" from the img for squared image! -->
+      <div class="row mb-10">
+        <div class="col-md-4">
+          <div class="testimonial testimonial-bordered p-15">
+            <figure class="float-left">
+              <img class="rounded" src="./assets/images/2-min.jpg" alt="" />
+            </figure>
+            <div class="testimonial-content">
+              <p>
+                Our elevators have truly made a difference in our daily
+                operations. Efficient and reliable!
+              </p>
+              <cite>
+                Felicia Doe
+                <span>Company Ltd.</span>
+              </cite>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial testimonial-bordered p-15">
+            <figure class="float-left">
+              <img class="rounded" src="./assets/images/1-min.jpg" alt="" />
+            </figure>
+            <div class="testimonial-content">
+              <p>
+                Choosing these elevators for our office space was a wise
+                decision. Excellent service!
+              </p>
+              <cite>
+                Joana Doe
+                <span>Company Ltd.</span>
+              </cite>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial testimonial-bordered p-15">
+            <figure class="float-left">
+              <img class="rounded" src="./assets/images/3-min.jpg" alt="" />
+            </figure>
+            <div class="testimonial-content">
+              <p>
+                We are highly satisfied with the elevators provided. Smooth
+                operations and top-notch service!
+              </p>
+              <cite>
+                Melissa Doe
+                <span>Company Ltd.</span>
+              </cite>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Note: remove class="rounded" from the img for squared image! -->
+      <ul class="row clearfix testimonial-dotted list-unstyled">
+        <li class="col-md-4">
+          <div class="testimonial">
+            <figure class="float-left">
+              <img class="rounded" src="./assets/images/10-min.jpg" alt="" />
+            </figure>
+            <div class="testimonial-content">
+              <p>
+                Our elevators have truly made a difference in our daily
+                operations. Efficient and reliable!
+              </p>
+              <cite>
+                Joana Doe
+                <span>Company Ltd.</span>
+              </cite>
+            </div>
+          </div>
+        </li>
+        <li class="col-md-4">
+          <div class="testimonial">
+            <figure class="float-left">
+              <img class="rounded" src="./assets/images/6-min.jpg" alt="" />
+            </figure>
+            <div class="testimonial-content">
+              <p>
+                We are highly satisfied with the elevators provided. Smooth
+                operations and top-notch service!
+              </p>
+              <cite>
+                Melissa Doe
+                <span>Company Ltd.</span>
+              </cite>
+            </div>
+          </div>
+        </li>
+        <li class="col-md-4">
+          <div class="testimonial">
+            <figure class="float-left">
+              <img class="rounded" src="./assets/images/7-min.jpg" alt="" />
+            </figure>
+            <div class="testimonial-content">
+              <p>
+                Our elevators have truly made a difference in our daily
+                operations. Efficient and reliable!
+              </p>
+              <cite>
+                Stephany Doe
+                <span>Company Ltd.</span>
+              </cite>
+            </div>
+          </div>
+        </li>
+        <li class="col-md-4">
+          <div class="testimonial">
+            <figure class="float-left">
+              <img class="rounded" src="./assets/images/4-min.jpg" alt="" />
+            </figure>
+            <div class="testimonial-content">
+              <p>
+                Choosing these elevators for our office space was a wise
+                decision. Excellent service and performance!
+              </p>
+              <cite>
+                Pamela Doe
+                <span>Company Ltd.</span>
+              </cite>
+            </div>
+          </div>
+        </li>
+        <li class="col-md-4">
+          <div class="testimonial">
+            <figure class="float-left">
+              <img class="rounded" src="./assets/images/11-min.jpg" alt="" />
+            </figure>
+            <div class="testimonial-content">
+              <p>
+                We are highly satisfied with the elevators provided. Smooth
+                operations and top-notch service!
+              </p>
+              <cite>
+                Simina Doe
+                <span>Company Ltd.</span>
+              </cite>
+            </div>
+          </div>
+        </li>
+        <li class="col-md-4">
+          <div class="testimonial">
+            <figure class="float-left">
+              <img class="rounded" src="./assets/images/12-min.jpg" alt="" />
+            </figure>
+            <div class="testimonial-content">
+              <p>
+                Choosing these elevators for our office space was a wise
+                decision. Excellent service and performance!
+              </p>
+              <cite>
+                Mihaela Doe
+                <span>Company Ltd.</span>
+              </cite>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
     <!-- PARALLAX SECTION -->
     </section class="alternate">
       <div class="container">
@@ -170,439 +601,8 @@
     </div>
     <!-- /PARALLAX SECTION -->
 
-    <!-- HEADER BREADCRUMBS SECTION -->
-    <div class="page-header page-header-xs parallax parallax-3" style="
-          background-image: url('./images/imgpattern2.jpg');
-        ">
-      <div class="overlay dark-2"></div>
-      <div class="container">
-        <h1><strong>QUOTE SERVICES</strong></h1>
-        <!-- breadcrumbs -->
-				<ol class="breadcrumb">
-					<li><a href="residential.html">Residential</a></li>
-					<li><a href="commercial.html">Commercial</a></li>
-				</ol>
-				<!-- /breadcrumbs -->
-      </div>
-    </div>
-    <!-- /HEADER BREADCRUMBS SECTION -->
-
-    <!-- TESTIMONIALS SECTION -->
-    <div id="" class="alternate">
-      <div class="container">
-        <header class="text-center mb-30">
-          <div class="heading-title heading-dotted text-center">
-            <h2 style="margin-top: 30px;">Feedback</h2>
-            <p class="lead font-lato">
-              Satisfied Customers with our Elevators
-            </p>
-          </div>
-
-        </header>
-        <!-- Note: remove class="rounded" from the img for squared image! -->
-        <div class="row mb-10">
-          <div class="col-md-4">
-            <div class="testimonial testimonial-bordered p-15">
-              <figure class="float-left">
-                <img class="rounded" src="./images/2-min.jpg" alt="" />
-              </figure>
-              <div class="testimonial-content">
-                <p>
-                  Our elevators have truly made a difference in our daily
-                  operations. Efficient and reliable!
-                </p>
-                <cite>
-                  Felicia Doe
-                  <span>Company Ltd.</span>
-                </cite>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="testimonial testimonial-bordered p-15">
-              <figure class="float-left">
-                <img class="rounded" src="./images/1min.jpg" alt="" />
-              </figure>
-              <div class="testimonial-content">
-                <p>
-                  Choosing these elevators for our office space was a wise
-                  decision. Excellent service!
-                </p>
-                <cite>
-                  Joana Doe
-                  <span>Company Ltd.</span>
-                </cite>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="testimonial testimonial-bordered p-15">
-              <figure class="float-left">
-                <img class="rounded" src="./images/3-min.jpg" alt="" />
-              </figure>
-              <div class="testimonial-content">
-                <p>
-                  We are highly satisfied with the elevators provided. Smooth
-                  operations and top-notch service!
-                </p>
-                <cite>
-                  Melissa Doe
-                  <span>Company Ltd.</span>
-                </cite>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Note: remove class="rounded" from the img for squared image! -->
-        <ul class="row clearfix testimonial-dotted list-unstyled">
-          <li class="col-md-4">
-            <div class="testimonial">
-              <figure class="float-left">
-                <img class="rounded" src="./images/10-min.jpg" alt="" />
-              </figure>
-              <div class="testimonial-content">
-                <p>
-                  Our elevators have truly made a difference in our daily
-                  operations. Efficient and reliable!
-                </p>
-                <cite>
-                  Joana Doe
-                  <span>Company Ltd.</span>
-                </cite>
-              </div>
-            </div>
-          </li>
-          <li class="col-md-4">
-            <div class="testimonial">
-              <figure class="float-left">
-                <img class="rounded" src="./images/6-min.jpg" alt="" />
-              </figure>
-              <div class="testimonial-content">
-                <p>
-                  We are highly satisfied with the elevators provided. Smooth
-                  operations and top-notch service!
-                </p>
-                <cite>
-                  Melissa Doe
-                  <span>Company Ltd.</span>
-                </cite>
-              </div>
-            </div>
-          </li>
-          <li class="col-md-4">
-            <div class="testimonial">
-              <figure class="float-left">
-                <img class="rounded" src="./images/7min.jpg" alt="" />
-              </figure>
-              <div class="testimonial-content">
-                <p>
-                  Our elevators have truly made a difference in our daily
-                  operations. Efficient and reliable!
-                </p>
-                <cite>
-                  Stephany Doe
-                  <span>Company Ltd.</span>
-                </cite>
-              </div>
-            </div>
-          </li>
-          <li class="col-md-4">
-            <div class="testimonial">
-              <figure class="float-left">
-                <img class="rounded" src="./images/c4.jpg" alt="" />
-              </figure>
-              <div class="testimonial-content">
-                <p>
-                  Choosing these elevators for our office space was a wise
-                  decision. Excellent service and performance!
-                </p>
-                <cite>
-                  Pamela Doe
-                  <span>Company Ltd.</span>
-                </cite>
-              </div>
-            </div>
-          </li>
-          <li class="col-md-4">
-            <div class="testimonial">
-              <figure class="float-left">
-                <img class="rounded" src="./images/11-min.jpg" alt="" />
-              </figure>
-              <div class="testimonial-content">
-                <p>
-                  We are highly satisfied with the elevators provided. Smooth
-                  operations and top-notch service!
-                </p>
-                <cite>
-                  Simina Doe
-                  <span>Company Ltd.</span>
-                </cite>
-              </div>
-            </div>
-          </li>
-          <li class="col-md-4">
-            <div class="testimonial">
-              <figure class="float-left">
-                <img class="rounded" src="./images/12-min.jpg" alt="" />
-              </figure>
-              <div class="testimonial-content">
-                <p>
-                  Choosing these elevators for our office space was a wise
-                  decision. Excellent service and performance!
-                </p>
-                <cite>
-                  Mihaela Doe
-                  <span>Company Ltd.</span>
-                </cite>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- QUOTE FORM SECTION -->
-    </section id="">
-      <div class="container text-center mb-60">
-        <h3 class="m-0 fs-50 fw-300 wow fadeInUp" data-wow-delay="0.4s">
-          <div class="heading-title heading-dotted text-center">
-            <h2 style="margin-bottom: 20px;">Request Quote</h2>
-          </div>
-        </h3>
-      </div>
-      <div class="container">
-        <form class="validate" id="">
-          <!-- STEP 1 -->
-          <div id="" class="select-building-type card card-default">
-            <div class="card-heading card-heading-transparent">
-              <label class="card-title">
-                <h3>
-                  <span style="color: rgb(10, 101, 160); font-weight: bolder">STEP 1 |</span>
-                  Select Type of Building
-                </h3>
-              </label>
-            </div>
-            <div class="card-block" style="margin: 20px">
-              <!-- Building type selection -->
-              <select id="building-type" name="building-type" class="form-control pointer required">
-                <option>---Select---</option>
-                <option id="residential" value="residential">
-                  Residential
-                </option>
-                <option id="commercial" value="commercial">Commercial</option>
-                <option id="industrial" value="industrial">Industrial</option>
-              </select>
-            </div>
-          </div>
-          <!-- /STEP 1 -->
-
-          <!-- STEP 2 -->
-          <div id="" class="estimate-num-elv card card-default">
-            <div class="card-heading step-description">
-              <h3>
-                <span style="color: rgb(10, 101, 160); font-weight: bolder">STEP 2 |</span>
-                Provide Building Information
-              </h3>
-            </div>
-            <div class="card-block">
-              <div class="row" style="margin: 20px">
-                <!-- Division of the input fields for number of apartments -->
-                <div id="" class="col-4">
-                  <label>
-                    <h4>Number of Apartments</h4>
-                    <input type="number" min="1" max="1000" class="form-control" required />
-                  </label>
-                </div>
-                <!-- Division of the input fields for number of floors -->
-                <div id="" class="col-4">
-                  <label>
-                    <h4>Number of Floors</h4>
-                    <input type="number" min="1" max="1000" class="form-control" required />
-                  </label>
-                </div>
-                <!-- Division of the input fields for number of elevators -->
-                <div id="" class="col-4">
-                  <label>
-                    <h4>Number of Elevators</h4>
-                    <input type="number" min="1" max="1000" class="form-control" required />
-                  </label>
-                </div>
-                <!-- Division of the input fields for maximum occupancy -->
-                <div id="" class="col-4">
-                  <label>
-                    <h4>Maximum Occupancy</h4>
-                    <input type="number" min="1" max="1000" class="form-control" required />
-                  </label>
-                </div>
-              </div>
-              <div class="row" style="margin: 20px">
-                <!-- Division of the read-only input fields for amount of elevators needed -->
-                <div id="" class="col-6">
-                  <label>
-                    <h4 style="margin-bottom: 0">
-                      Number of Elevators Required (Minimum of 1):
-                    </h4>
-                    <input type="number" class="form-control" readonly />
-                  </label>
-                  <p style="margin-bottom: 0">
-                    * With exception for commercial buildings
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /STEP 2 -->
-
-          <!-- STEP 3 -->
-          <div id="" class="product-line card card-default">
-            <div class="card-heading card-heading-transparent">
-              <h3>
-                <span style="color: rgb(10, 101, 160); font-weight: bolder">STEP 3 |</span>
-                Select Product Line
-              </h3>
-              <p style="margin-bottom: 0">
-                * Excluding tax and offers (if applicable)
-              </p>
-              <p style="
-                    color: rgb(170, 69, 69);
-                    display: none;
-                    margin-bottom: 0;
-                  " id="warning-step-2">
-                Complete Step 2 to Estimate Price
-              </p>
-            </div>
-            <div class="card-block">
-              <div id="" class="row">
-                <!-- Radio buttons for product line -->
-                <div class="col-4" style="display: flex; justify-content: center">
-                  <label class="standard radio">
-                    <!-- Radio button standard -->
-                    <input type="radio" id="" name="radio-product-line" />
-                    <i></i> STANDARD ✭
-                  </label>
-                </div>
-                <div class="col-4" style="display: flex; justify-content: center">
-                  <label class="premium radio">
-                    <!-- Radio button premium -->
-                    <input type="radio" id="" name="radio-product-line" />
-                    <i></i> PREMIUM ✭✭
-                  </label>
-                </div>
-                <div class="col-4" style="display: flex; justify-content: center">
-                  <label class="excelium radio">
-                    <!-- Radio button excelium -->
-                    <input type="radio" id="" name="radio-product-line" />
-                    <i></i> EXCELIUM ✭✭✭
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /STEP 3 -->
-
-          <!-- STEP 4 -->
-          <div id="" class="final-pricing-display card card-default">
-            <div class="card-heading card-heading-transparent">
-              <h3>
-                <span style="color: rgb(10, 101, 160); font-weight: bolder">STEP 4 |</span>
-                Estimated Pricing
-              </h3>
-              <p style="margin-bottom: 0">
-                * Excluding tax and offers (if applicable)
-              </p>
-              <p style="color:rgb(170, 69, 69);display: none;margin-bottom: 0;" id="warning-step-4">
-                Complete Step 2 to Estimate Price
-              </p>
-            </div>
-            <div class="card-block">
-              <div class="pricing-display row mega-price-table" style="margin: 20px">
-                <div class="col-md-3 col-sm-6 block">
-                  <div class="pricing">
-                    <div class="pricing-head">
-                      <h3>Unit Price</h3>
-                      <small>for Product Line</small>
-                    </div>
-                    <h4>
-                      <label>
-                        <!-- Read-only input fields for elevator unit price -->
-                        <input id="" type="text" class="form-control" style="
-                              background: none;
-                              text-align: center;
-                              border: none;
-                              font-size: x-large;
-                            " readonly />
-                      </label>
-                    </h4>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6 block">
-                  <div class="pricing">
-                    <div class="pricing-head">
-                      <h3>Elevator Cost</h3>
-                      <small>Based on no. of Elevator Required</small>
-                    </div>
-                    <h4>
-                      <label>
-                        <!-- Read-only input fields for elevator cost -->
-                        <input id="" type="text" class="form-control" style="
-                              background: none;
-                              text-align: center;
-                              border: none;
-                              font-size: x-large;
-                            " readonly />
-                      </label>
-                    </h4>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6 block">
-                  <div class="pricing">
-                    <div class="pricing-head">
-                      <h3>Installation Fee</h3>
-                      <small>Percent Elevator Cost</small>
-                    </div>
-                    <h4>
-                      <label>
-                        <!-- Read-only input fields for installation fees -->
-                        <input id="" type="text" class="form-control" style="
-                              background: none;
-                              text-align: center;
-                              border: none;
-                              font-size: x-large;
-                            " readonly />
-                      </label>
-                    </h4>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6 block">
-                  <div class="pricing">
-                    <div class="pricing-head">
-                      <h3>Total Cost</h3>
-                      <small>Elevator plus Installation Fee</small>
-                    </div>
-                    <h4>
-                      <label>
-                        <!-- Read-only input fields for total cost -->
-                        <input id="" type="text" class="form-control" style="
-                              background: none;
-                              text-align: center;
-                              border: none;
-                              font-size: x-large;
-                            " readonly />
-                      </label>
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /STEP 4 -->
-        </form>
-      </div>
-    </section>
-    <!-- /QUOTE FORM SECTION -->
-
     <!-- FOOTER -->
-    <footer id="" style="color: #fff; background: #0a65a0">
+    <footer id="footer" style="color: #fff; background: #0a65a0">
       <div class="container">
         <div class="row">
           <!-- col #1 -->
@@ -669,7 +669,7 @@
     <!-- /FOOTER -->
 
     <!-- MODAL SUBSCRIBE DIVISION -->
-    <div class="modal fade" id="" role="dialog">
+    <div class="modal fade" id="modal-subscribe" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header" style="background-color: rgb(10, 101, 160);">

@@ -3,11 +3,11 @@
 ////////////////////////////////////////////////////////////////
 
 // Define the API endpoint for the contact form
-var CONTACT_FORM_URL = "";
+const CONTACT_FORM_URL = "http://99.79.77.144:3000/api/contact";
 
 // Get references to the form and its input fields
-var CONTACT_FORM = document.getElementById('');
-var CONTACT_FIELDS = ['', '', '', '', '', '', '', '']
+const CONTACT_FORM = document.getElementById('contact-form');
+const CONTACT_FIELDS = ['fullname', 'email', 'phone', 'company_name', 'project_name', 'project_desc', 'department', 'message']
 	.map(field => document.querySelector(`[name="${field}"]`));
 
 ////////////////////////////////////////////////////////////////
@@ -24,11 +24,11 @@ CONTACT_FORM.addEventListener("", async (e) => {
 	e.preventDefault();
 
 	// Extract form data and create an object
-	var DATA = Object.fromEntries(CONTACT_FIELDS.map(field => [field.name, field.value]));
+	const DATA = Object.fromEntries(CONTACT_FIELDS.map(field => [field.name, field.value]));
 
 	try {
 		// Send a POST request to the specified API endpoint with the form data
-		var RESPONSE = await fetch(CONTACT_FORM_URL, {
+		const RESPONSE = await fetch(CONTACT_FORM_URL, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -37,7 +37,7 @@ CONTACT_FORM.addEventListener("", async (e) => {
 		});
 
 		// Parse the response as JSON
-		var RESULT = await RESPONSE.json();
+		const RESULT = await RESPONSE.json();
 		
 		// Show success message modal and log the result
 		$("#success-message").modal("show");
@@ -54,7 +54,7 @@ CONTACT_FORM.addEventListener("", async (e) => {
 ////////////////////////////////////////////////////////////////
 
 // Check for a hash in the URL and show the corresponding element
-var hash = window.location.hash;
+const hash = window.location.hash;
 if (hash) {
 	jQuery(hash).show();
 }
